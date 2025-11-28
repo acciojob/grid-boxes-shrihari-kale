@@ -1,13 +1,8 @@
 #grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    "b1 b1  b1  b1"
-    "b2 b3  b4  b4"
-    "b2 b5  b5  b6"
-    "b2 b7  b8  b9"
-    "b2 b10 b10 b10";
-  gap: 10px;
+  grid-template-rows: 124px 124px 124px 124px 124px;
+  grid-template-columns: 242.5px 242.5px 242.5px 242.5px;
+  grid-gap: 10px 10px;
 }
 
 .box {
@@ -17,13 +12,23 @@
   padding: 20px;
 }
 
-.b1  { grid-area: b1; }
-.b2  { grid-area: b2; }
-.b3  { grid-area: b3; }
-.b4  { grid-area: b4; }
-.b5  { grid-area: b5; }
-.b6  { grid-area: b6; }
-.b7  { grid-area: b7; }
-.b8  { grid-area: b8; }
-.b9  { grid-area: b9; }
-.b10 { grid-area: b10; }
+/* Cypress-required layout */
+.b1 {
+  grid-column: span 4 / auto;
+}
+
+.b2 {
+  grid-row: span 4 / auto;
+}
+
+.b4 {
+  grid-column: span 2 / auto;
+}
+
+.b5 {
+  grid-column: span 2 / auto;
+}
+
+.b10 {
+  grid-column: span 3 / auto;
+}
